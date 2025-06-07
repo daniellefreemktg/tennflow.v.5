@@ -53,10 +53,9 @@ const HomePage: React.FC = () => {
               
               <div className="text-center mt-8">
                 <a 
-                  href="/businesses" 
-                  className="inline-block bg-gold hover:bg-gold/80 text-navy px-6 py-3 rounded-full font-medium transition-colors"
-                >
-                  View All Businesses
+                 <Link to="/businesses" className="text-cream hover:text-gold transition-colors">
+            Businesses
+          </Link>
                 </a>
               </div>
             </>
