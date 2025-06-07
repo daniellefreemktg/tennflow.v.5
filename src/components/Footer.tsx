@@ -11,11 +11,7 @@ const Footer: React.FC = () => {
           </div>
           <div>
             <h4 className="font-semibold text-gold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><a href="/" className="hover:text-gold transition-colors">Home</a></li>
-              <li><a href="/about" className="hover:text-gold transition-colors">About</a></li>
-              <li><a href="/businesses" className="hover:text-gold transition-colors">Business Directory</a></li>
-            </ul>
+            
           </div>
           <div>
             <h4 className="font-semibold text-gold mb-4">Contact</h4>
