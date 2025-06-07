@@ -9,6 +9,7 @@ interface BlogPost {
   date: string;
   image: string;
   category: string;
+  nameofbusiness: string;
 }
 
 const blogPosts: BlogPost[] = [
@@ -19,7 +20,8 @@ const blogPosts: BlogPost[] = [
     author: 'Sarah Johnson',
     date: '2024-03-15',
     image: 'https://images.pexels.com/photos/2233729/pexels-photo-2233729.jpeg',
-    category: 'Food & Dining'
+    category: 'Food & Dining',
+    nameofbusiness: 'Business Featured: Sample Business 1'
   },
   {
     id: '2',
@@ -28,7 +30,8 @@ const blogPosts: BlogPost[] = [
     author: 'Mike Thompson',
     date: '2024-03-12',
     image: 'https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg',
-    category: 'Music & Entertainment'
+    category: 'Music & Entertainment',
+    nameofbusiness: 'Business Featured: Sample Business 1'
   },
   {
     id: '3',
@@ -37,7 +40,8 @@ const blogPosts: BlogPost[] = [
     author: 'Emily Chen',
     date: '2024-03-10',
     image: 'https://images.pexels.com/photos/6263568/pexels-photo-6263568.jpeg',
-    category: 'Outdoor & Recreation'
+    category: 'Outdoor & Recreation',
+    nameofbusiness: 'Business Featured: Sample Business 1'
   }
 ];
 
@@ -63,7 +67,7 @@ const BlogPage: React.FC = () => {
                     {post.category}
                   </span>
                 </div>
-                <h2 className="text-xl font-semibold text-navy mb-3">{post.title}</h2>
+                <h2 className="text-xl font-semibold text-navy mb-3"><a href="https://example.com">{post.title}</a></h2>
                 <p className="text-navy/70 mb-4">{post.excerpt}</p>
                 <div className="flex items-center text-sm text-navy/60 mb-4">
                   <User size={16} className="mr-1" />
@@ -71,10 +75,7 @@ const BlogPage: React.FC = () => {
                   <Calendar size={16} className="mr-1" />
                   <span>{new Date(post.date).toLocaleDateString()}</span>
                 </div>
-                <button className="flex items-center text-gold hover:text-gold/80 transition-colors">
-                  Read More
-                  <ArrowRight size={16} className="ml-1" />
-                </button>
+                <p className="text-navy/70 mb-4">{post.nameofbusiness}</p>
               </div>
             </article>
           ))}
